@@ -1,0 +1,159 @@
+:root {
+  --purple: #820ad1;
+  --white: #ffffff;
+  --black: #000000;
+  --main-bg-color: linear-gradient(
+    99.92deg,
+    rgb(159, 45, 235) 18.57%,
+    rgb(98, 0, 163) 71.77%
+  );
+  --placeholder-color: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.card-ui {
+  height: 100vh;
+  background: var(--main-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-ui__container {
+  margin-bottom: -150px;
+  position: relative;
+  height: 220px;
+  width: 400px;
+}
+
+.card-ui__front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--purple);
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.3s ease-out;
+}
+
+.card-ui__front-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.card-ui__front-images img {
+  height: 50px;
+}
+
+.card-ui__front-number {
+  padding: 30px 0;
+  font-size: 22px;
+  color: var(--white);
+}
+
+.card-ui__front--flex {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.card-ui__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--purple);
+  border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 20px 0;
+  text-align: right;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.3s ease-out;
+}
+
+.card-ui__back-stripe {
+  background: var(--black);
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+}
+
+.card-ui__back-cvv-container {
+  padding: 0 20px;
+}
+
+.card-ui__back-cvv-container span {
+  color: var(--white);
+  font-size: 15px;
+}
+
+.card-ui__back-cvv {
+  height: 40px;
+  padding: 10px;
+  margin-top: 5px;
+  color: var(--black);
+  background: var(--white);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.card-ui__back-cvv-container img {
+  margin-top: 15px;
+  height: 30px;
+}
+
+.card-ui__form {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 600px;
+  padding-top: 160px;
+}
+
+.card-ui__form-input {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-ui__form-input span {
+  display: block;
+  color: var(--purple);
+  padding-bottom: 5px;
+}
+
+.card-ui__form-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border 0.3s ease-out;
+  outline: none;
+}
+
+.card-ui__form-input input:focus {
+  border: 1px solid var(--purple);
+}
+
+.card-ui__form--flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREDIT CARD UI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <section class="card-ui">
+      <div class="card-ui__container">
+        <div class="card-ui__front">
+          <div class="card-ui__front-images">
+            <img src="./images/chip.png" alt="" />
+            <img src="./images/mc.png" alt="" />
+          </div>
+          <div class="card-ui__front-number">1234 5678 9101 1112</div>
+          <div class="card-ui__front--flex">
+            <div class="card-ui__front-holder-name">full name</div>
+            <div class="card-ui__front-exp">
+              <span class="card-ui__front-exp-month">mm</span>
+              <span> / </span>
+              <span class="card-ui__front-exp-year">yy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-ui__back">
+          <div class="card-ui__back-stripe"></div>
+          <div class="card-ui__back-cvv-container">
+            <span>cvv</span>
+            <div class="card-ui__back-cvv"></div>
+            <img src="./images/mc.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <form class="card-ui__form">
+        <div class="card-ui__form-input">
+          <span>card number</span>
+          <input maxlength="16" class="card-number-input"">
+        </div>
+        <div class="card-ui__form-input">
+          <span>card holder</span>
+          <input maxlength="16" class="card-holder-input"">
+        </div>
+
+        <div class="card-ui__form--flex">
+          <div class="card-ui__form-input">
+            <span>expiration mm</span>
+            <input maxlength="2" class="month-input"">
+          </div>
+          <div class="card-ui__form-input">
+            <span>expiration yy</span>
+            <input maxlength="2" class="year-input"">
+          </div>
+          <div class="card-ui__form-input">
+            <span>cvv</span>
+            <input maxlength="4" class="card-cvv-input"">
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
